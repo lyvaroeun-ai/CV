@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table{
+        width: 50%;
+        text-align: center;
+        margin: 30px auto;
+       
+    }
+    table,th,td{
+        border-width:1px ;
+        border-style: solid;
+        border-color: aqua;
+        border-collapse:collapse;
+        padding: 10px
+    }
+    thead{
+        background-color: black;
+        color: white;
+    }
+    button{
+        border:none;
+        padding:7px;
+        color:white;
+        border-radius:7px;
+        cursor: pointer;
+    }
+    #view{
+        background-color: dodgerblue;
+    }
+    #edit{
+        background-color :rgb(204,204,0);
+    }
+    #detele{
+        background-color:green;
+    }
+    img{
+        width: 50px;
+    }
+</style>
+<body>
+    <table >
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Phone</th>
+                <th>Major</th>
+                <th>images</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>111</td>
+                <td>Dara</td>
+                <td>Male</td>
+                <td>09873646254</td>
+                <td>software developer</td>
+                <td>
+                    <img src="data:image/jpeg;base64,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"alt="">
+                </td>
+                <td>
+                    <button  id="view"> view </button>
+                    <button id="edit"> edit</button>
+                    <button id="delete">delete </button>
+                </td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>Dara</td>
+                <td>Male</td>
+                <td>09873646254</td>
+                <td> software developer </td>
+                <td>
+                    <img src="data:image/jpeg;base64,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"alt="">
+                </td>
+                <td>
+                    <button  id="view"> view </button>
+                    <button id="edit"> edit</button>
+                    <button id="delete">delete </button> 
+                </td>
+            </tr>
+            <tr>
+                <td>111</td>
+                <td>Dara</td>
+                <td>Male</td>
+                <td>09873646254</td>
+                <td>
+                    software developer
+                </td>
+                <td>
+                    <img src="data:image/jpeg;base64,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"alt="">
+                </td>
+                <td>
+                     <button  id="view"> view </button>
+                    <button id="edit"> edit</button>
+                    <button id="delete">delete </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <thead>
+            <tr>
+                <th colspan="6">System Shop Coffee</th>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>101.</td>
+                <td>Matcha Latte</td>
+                <td>Iec</td>
+                <td>1.25$</td>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9kDkPmJNAS21pFkS2VnigqCJajRpUXJ2m6dYZHmzUAA&s=10" alt="">
+                </td>
+                <td>
+                    <button id="view">View</button>
+                    <button id="edit" >Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>102.</td>
+                <td>Capuchino</td>
+                <td>Iec</td>
+                <td>1.25$</td>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1MqAzUb4XhAnrU03Yw0cXNAqlyHT3Er732FfVbb2j5w&s=10" alt="">
+                </td>
+                <td>
+                    <button id="view">View</button>
+                    <button id="edit" >Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>103.</td>
+                <td>Get coffee</td>
+                <td>Ice</td>
+                <td>1.25$</td>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUe8i48K2-mjLCAmmwdTIdurFnC8NbNSq0znKM4NvFlg&s=10" alt="">
+                </td>
+                <td>
+                    <button id="view">View</button>
+                    <button id="edit" >Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>104.</td>
+                <td>Honey lemon</td>
+                <td>Ice</td>
+                <td>1.50$</td>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3VL2qV6uEjoRGJ4U-bgjDt6ZO1srZP5DRG_ZBQHaolA&s=10" alt="">
+                </td>
+                <td>
+                    <button id="view">View</button>
+                    <button id="edit" >Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+            <tr>
+                <td>105.</td>
+                <td>Coffee cream egg</td>
+                <td>Iec</td>
+                <td>1.50$</td>
+                <td>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-gogVKOCGwv2mn1CwmwOo1ZuU4CZWykERH8WVDU--OQ&s=10" alt="">
+                </td>
+                <td>
+                    <button id="view">View</button>
+                    <button id="edit" >Edit</button>
+                    <button id="delete">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>

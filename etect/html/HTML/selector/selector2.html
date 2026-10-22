@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .example-1 p{
+        color: red;
+    }
+    .example-2 > p{
+        color: blue;
+    }
+    .example-3 h2 + p{
+        color: blueviolet;
+    }
+    .example-4 h2 ~ p{
+        color: orange;
+    }
+</style>
+<body>
+    <h1>I Love U</h1>
+    <section class="example-1" >
+        <p>This is a pharagrap1</p>
+        <div>
+            <p>This is a pharagrap2</p>
+            <p>this is a pharagrap3</p>
+        </div>
+    </section>
+
+    <div class="example-2" >
+        <h3>Example 2: A>B (childrectd)</h3>
+        <p>This is direct child -> blue</p>
+        <p>This is direct child ->blue</p>
+        <section>
+            <p>This is nested, not direct -> Not blue</p>
+        </section>
+    </div>
+
+    <div class="example-3" >
+        <h3>Example 3: A + B (adjacent sibling)</h3>
+        <h2>Heading</h2>
+        <p>This is direct after h2 -> green</p>
+        <p>This is not directly after h2 -> Not green </p>
+    </div>
+
+    <div class="example-4">
+        <h3>Example 4: A ~ B (general siblings)</h3>
+
+        <p>Comes before h2</p>
+        <h2>Heading</h2>
+        <p>Comes after h2 not orange</p>
+        <p>Also comes after h2 -> orange</p>
+        <p>Also comes after h2 -> orange</p>
+        <h3>Hello</h3>
+        <p>Also comes after h2 -> orange</p>
+    </div>
+    <p>This is a pharagrap</p>
+
+</body>
+</html>
